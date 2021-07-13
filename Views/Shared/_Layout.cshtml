@@ -61,7 +61,14 @@
             </nav>
         </header>
         <section id="actionCall">
-            @RenderSection("header", required: false)
+            @if (IsSectionDefined("header"))
+            {
+                @RenderSection("header", required: false)
+            }
+            else
+            {
+                <h1>Explore the world of Leeds</h1>
+            }
         </section>
         <div id="contentWrapper">
             <section id="mainContent">
